@@ -1,5 +1,8 @@
 export default class Router {
-  constructor(routes = [], renderNode) {
+  routes;
+  renderNode;
+
+  constructor(routes, renderNode) {
     this.routes = routes;
     this.renderNode = renderNode;
     this.navigate(location.pathname + location.hash);
@@ -29,7 +32,7 @@ export default class Router {
       }, null);
     }
 
-    // route.setProps(params);
+    route.setProps(params);
 
     return routeMatch;
   }

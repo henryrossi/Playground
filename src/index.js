@@ -2,12 +2,14 @@ import Route from "./router/Route.js";
 import Router from "./router/Router.js";
 import Home from "./views/Home.js";
 import Dom from "./views/Dom.js";
+import Animation from "./views/Animation.js";
 
 console.log("JS is loaded");
 
 const routes = [
     new Route("/", new Home),
     new Route("/dom", new Dom),
+    new Route("/animation/:name", new Animation),
 ];
 
 const router = new Router(routes, document.getElementById("root"));
@@ -26,6 +28,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   );
 });
 
+// I don't know what this does, but it calls navigate twice when you change pages
 window.addEventListener("hashchange", (e) =>
   router.navigate(e.target.location.hash.substr(1))
 );
