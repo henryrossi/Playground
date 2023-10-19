@@ -1,0 +1,9 @@
+#root {
+    margin-left: 20%;
+}
+
+.navbar {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+}
