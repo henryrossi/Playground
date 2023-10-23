@@ -32,7 +32,7 @@ export default class Router {
       }, null);
     }
 
-    route.setProps(params);
+    route.setParams(params);
 
     return routeMatch;
   }

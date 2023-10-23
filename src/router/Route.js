@@ -1,18 +1,18 @@
 export default class Route {
   path;
   name;
-  props;
+  params;
 
   constructor(path, view) {
     this.path = path;
     this.view = view;
   }
 
-  setProps(newProps) {
-    this.props = newProps;
+  setParams(newParams) {
+    this.params = newParams;
   }
 
   renderView() {
-    return this.view.render(this.props);
+    return this.view.render(this.params);
   }
 }
