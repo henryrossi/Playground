@@ -1,16 +1,30 @@
 #root {
-    margin-left: 20%;
+    margin-left: 200px;
 }
 
+/* Pick three/two colors too repeat across website like a brand */
+
 .navbar {
-    width: 20%;
+    width: 200px;
     height: 100%;
+    padding-top: 20px;
     position: fixed;
 }
 
 .navbar button {
-    width: 100%;
+    width: 97.5%;
     height: 50px;
     border: none;
     cursor: pointer;
+    text-align: left;
+    padding: 0 0 0 20px;
+    font-size: 1em;
+    color: #808080;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.navbar button:hover {
+    color: #00c0c2;
+    background-color: #deffff;
 }

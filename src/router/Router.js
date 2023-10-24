@@ -13,17 +13,17 @@ export default class Router {
   }
 
   match(route, requestPath) {
-    let paramNames = [];
+    const paramNames = [];
 
     // create the regular expression of the route
-    let regexPath =
+    const regexPath =
       route.path.replace(/([:*])(\w+)/g, (full, colon, name) => {
         paramNames.push(name);
         return "([^/]+)";
       }) + "(?:/|$)";
 
     let params = {};
-    let routeMatch = requestPath.match(new RegExp(regexPath));
+    const routeMatch = requestPath.match(new RegExp(regexPath));
     if (routeMatch != null) {
       params = routeMatch.slice(1).reduce((params, value, index) => {
         if (params == null) params = {};

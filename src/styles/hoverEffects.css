@@ -1,0 +1,130 @@
+.hover-effects-page {
+    position: fixed;
+    background-color: #0F0F0F;
+    top: 0;
+    bottom: 0;
+    left: 200px;
+    right: 0;
+}
+
+/* Lily Effect */
+
+.lily-effect {
+    width: 480px;
+    height: 360px;
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lily-effect img {
+    width: calc(100% + 50px);
+    transform: translateX(-50px);
+    opacity: 0.6;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.lily-effect:hover img {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.lily-effect h2 {
+    transform: translateY(-120px);
+    padding-left: 40px;
+    font-size: 30px;
+    font-weight: 300;
+    word-spacing: -0.15em;
+    transition: transform 0.4s;
+}
+
+.lily-effect h2 span {
+    font-weight: 800;
+}
+
+.lily-effect p {
+    opacity: 0;
+    transform: translateY(-120px);
+    padding-left: 40px;
+    font-size: 15px;
+    transition: transform 0.4s, opacity 0.3s ease-in-out;
+}
+
+.lily-effect:hover h2, .lily-effect:hover p {
+    transform: translateY(-160px);
+    opacity: 1;
+}
+
+/* Sadie Effect */
+
+.sadie-effect {
+    width: 480px;
+    height: 360px;
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sadie-effect img {
+    width: 107%;
+    opacity: 0.6;
+}
+
+.sadie-effect h2 {
+    text-align: center;
+    color: #0F0F0F;
+    transform: translateY(-200px);
+    font-size: 30px;
+    font-weight: 300;
+    word-spacing: -0.15em;
+    transition: transform 0.4s, color 0.4s;
+}
+
+.sadie-effect h2 span {
+    font-weight: 800;
+}
+
+.sadie-effect:hover h2 {
+    transform: translateY(-240px);
+    color: white;
+} 
+
+.sadie-effect p {
+    opacity: 0;
+    color: #0F0F0F;
+    padding: 0 15%;
+    text-align: center;
+    transform: translateY(-75px);
+    transition: transform 0.4s, color 0.4s, opacity 0.3s ease-in-out;
+}
+
+.sadie-effect:hover p {
+    opacity: 1;
+    color: white;
+    transform: translateY(-100px);
+}
+
+.sadie-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.sadie-effect:hover::before {
+    opacity: 1;
+}

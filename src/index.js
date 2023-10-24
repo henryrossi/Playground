@@ -2,14 +2,14 @@ import Route from "./router/Route.js";
 import Router from "./router/Router.js";
 import Home from "./views/Home.js";
 import Dom from "./views/Dom.js";
-import Animation from "./views/Animation.js";
+import HoverEffects from "./views/HoverEffects.js";
 
 console.log("JS is loaded");
 
 const routes = [
     new Route("/", new Home),
     new Route("/dom", new Dom),
-    new Route("/animation/:name", new Animation),
+    new Route("/CSS/:name", new HoverEffects),
 ];
 
 const router = new Router(routes, document.getElementById("root"));
